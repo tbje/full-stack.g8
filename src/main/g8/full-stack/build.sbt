@@ -19,7 +19,6 @@ lazy val client = (project in file("js")).settings(
 
 lazy val shared = (crossProject.crossType(CrossType.Pure) in file("shared")).
   settings(
-    ensimeScalaVersion in ThisBuild := Version.scala,
     scalaVersion := Version.scala,
     libraryDependencies ++= Deps.shared.value
   ).
