@@ -15,7 +15,9 @@ object Client extends js.JSApp {
 
   def main(): Unit = {
     println(s"Trying to get time from server ...")
+
     val mainDiv = el[dom.html.Div](Ids.main)
+
     Wire[shared.Api].getFromServer().call().onComplete {
       case Success(m) =>
         val msg = m.msg + " " + m.time
