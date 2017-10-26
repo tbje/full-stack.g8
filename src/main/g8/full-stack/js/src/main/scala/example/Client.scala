@@ -9,11 +9,11 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import org.scalajs.dom
 import shared._
 
-object Client extends js.JSApp {
+object Client {
 
   def el[T <: dom.raw.HTMLElement] (id: String) = dom.document.getElementById(id).asInstanceOf[T]
 
-  def main(): Unit = {
+  def main(args: Array[String]): Unit = {
     println(s"Trying to get time from server ...")
 
     val mainDiv = el[dom.html.Div](Ids.main)
