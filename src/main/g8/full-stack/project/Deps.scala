@@ -3,7 +3,7 @@ object Version {
   val autowire = "0.2.6"
   val boopickle = "1.2.6"
   val monocle = "1.4.0"
-  val scala = "2.12.3"
+  val scala = "2.12.4"
   val scalajsDom = "0.9.3"
   val scalajsScripts = "1.1.1"
   val scalatags = "0.6.7"
