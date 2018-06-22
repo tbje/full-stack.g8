@@ -1,3 +1,5 @@
+import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
+
 lazy val server = (project in file("jvm")).settings(
   scalaVersion := Version.scala,
   scalaJSProjects := Seq(client),
@@ -17,7 +19,7 @@ lazy val client = (project in file("js")).settings(
 ).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
   dependsOn(sharedJs)
 
-lazy val shared = (crossProject.crossType(CrossType.Pure) in file("shared")).
+lazy val shared = (crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure) in file("shared")).
   settings(
     scalaVersion := Version.scala,
     libraryDependencies ++= Deps.shared.value
@@ -30,4 +32,4 @@ lazy val sharedJs = shared.js
 scalaVersion := Version.scala
 
 // loads the server project at sbt startup
-onLoad in Global := (Command.process("project server", _: State)) compose (onLoad in Global).value
+onLoad in Global ~= (_ andThen ("project server" :: _))
