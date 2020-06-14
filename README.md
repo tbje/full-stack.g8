@@ -19,4 +19,5 @@ Shared code in `shared`.
 [g8]: http://www.foundweekends.org/giter8/
 
 Changes:
-June 22nd 2018: Upgrade sbt 1.1.6 and ScalaJS 0.6.23 + others.
+- June 22nd 2018: Upgrade sbt 1.1.6 and ScalaJS 0.6.23 + others.
+- June 14th 2020: Upgrade libs.
