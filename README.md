@@ -25,6 +25,6 @@ Changes:
 - June 14th 2020: Upgrade libs.
 
 ## Is the template up to date ?
-Whenever I make any changes to this template I run it and push the update to [tbje/full-stack](https://github.com/tbje/full-stack).
+Whenever I make changes to this template I run it and push the update to [tbje/full-stack](https://github.com/tbje/full-stack).
 On this repository Scala Steward is providing [PRs](https://github.com/tbje/full-stack/pulls) for updated dependencies and plugins so you can check how lazy I've been updating
 the template.
