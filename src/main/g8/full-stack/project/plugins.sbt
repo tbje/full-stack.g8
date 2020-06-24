@@ -1,3 +1,5 @@
+resolvers += Resolver.bintrayIvyRepo("eed3si9n", "sbt-plugins")
+
 // fast development turnaround when using sbt ~re-start
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
 
